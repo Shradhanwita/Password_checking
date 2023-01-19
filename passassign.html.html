@@ -1,0 +1,92 @@
+<html>
+<head>
+<script type="text/javascript" >
+function pass_valid()
+{
+var fpassword=document.f1.password1.value;  
+var spassword=document.f1.password2.value;  
+
+if (fpassword == "") {
+          alert("Please enter password");
+          return false;
+        } else if (fpassword.length < 6) {
+          alert("Password must be more than 6 char");
+          return false;
+        } else if(spassword == "") {
+          alert("Please re-enter password");
+          return false;
+        } else if(fpassword!=spassword){  
+          alert("Both the passwords are not same"); 
+          return false;
+        } else { 
+          alert("Passwords got matched");
+          return true;  
+}  
+} 
+</script>
+<title></title>
+<link rel="stylesheet" href="password.css">
+</head>
+
+<body> 
+<!--<form name="f1"  method="GET"  action="/JavaScript/Index"  onsubmit="return pass_valid()">  
+Password:<input type="password" name="password1" placeholder="Enter password here" /><br/>  
+Re-enter Password:<input type="password" name="password2" placeholder="Re-enter password here"/><br/>  
+<input type="submit" value="SUBMIT">  
+</form> -->
+
+<br><br><br>
+<table align="center" >
+  <tbody>
+  <tr>
+<td><div class="lock"></div></td>
+
+</tr>
+
+<tr><td><h2>Password</h2></td></tr>
+</tbody>
+</table>
+<br><br><br><br>
+<form name="f1"  method="GET"  action="/JavaScript/Index"  onsubmit="return pass_valid()"> 
+
+  <table align="center"> 
+
+      <tr> 
+
+          <td  style="font-size: 50px;" >Enter password:</td> 
+
+          <td><input type="password" name="password1" placeholder="Enter password here" style="font-size: 40px;"/></td> 
+
+      </tr> 
+
+      <tr> 
+
+          <td  style="font-size: 50px;" >Re-enter password:</td> 
+
+          <td><input type="password" name="password2" placeholder="Re-enter password here" style="font-size: 40px;"/></td> 
+
+      </tr> 
+<!--
+      <tr  style="font-size: 40px;" > 
+
+          <td colspan = 2 align = left> 
+
+            <input type="submit" value="SUBMIT" style="font-size: 30px;"> 
+
+      </tr> -->
+
+  </table> 
+
+  <br><br><br><br><br><br><br>
+        <table align="center" >
+            <tr  style="font-size: 60px;" > 
+
+                <td> 
+                  <input type="submit" value="SUBMIT" style="font-size: 40px;"> 
+                </td>
+            </tr> 
+        </table>
+
+  </form>
+</body>
+</html>
